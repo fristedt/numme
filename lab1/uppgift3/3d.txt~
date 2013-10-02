@@ -1,0 +1,1 @@
+Centraldifferens har högre noggrannhetsordning än framåtdifferens. Alltså, centraldifferensens fel minskar snabbare när man minskar steglängden än vad framåtdifferensens fel gör. 

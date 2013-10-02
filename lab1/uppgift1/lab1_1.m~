@@ -1,0 +1,20 @@
+x = @(delta) cos(delta).^3;
+y = @(delta) 1.5*sin(delta) - sin(delta).^3;
+delta = 0 : 0.01 : pi / 2;
+
+%plot(x(delta), y(delta));
+
+x0 = 0;
+ytemp = @(delta) 1.5*sin(delta) - sin(delta).^3 - 0.64;
+dytemp = @(delta) 1.5*cos(delta) - 3*cos(delta)*sin(delta)^2;
+rootdelta = newton(ytemp, dytemp, x0, 1e-10)
+subplot(2,2,1);
+plot(x(delta), y(delta), x(rootdelta), 0.64, '*');
+
+x0 = 1;
+rootdelta = newton(ytemp, dytemp, x0, 1e-10)
+subplot(2,2,2);
+plot(x(delta), y(delta), x(rootdelta), 0.64, '*');
+
+
+

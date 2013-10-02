@@ -1,0 +1,1 @@
+Centraldifferens har högre noggrannhetsordning än framåtdifferens. Alltså, centraldifferensens fel minskar snabbare när man minskar steglängden än vad framåtdifferensens fel gör. Detta reflekteras tydligt i grafen, fram tills datorns begränsningar gör att felet börjar stiga igen. Detta sker ungefär vid 10^-5 för centraldifferens och vid 10^-8 för framåtdifferens.

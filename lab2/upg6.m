@@ -1,6 +1,6 @@
 % Indata.
 clear, clf, hold off
-global x h uL uR
+global x h yL yR
 format short e, format compact
 N = 10; a = 1; b = 3; uL = 2; uR = 4;
 h = (b-a)/(N+1); x = [a+h:h:b-h]';
@@ -16,7 +16,6 @@ while norm(du, inf) > 1.E-12 * norm(u, inf),
   norms = [norms; norm(du, inf)];
 end
 xp = [a;x;b]; yp = [uL;u;uR];
-subplot(1, 2, 1);
 plot(xp, yp); grid; %spy(J);
 disp('N = 10');
 disp(i);
@@ -38,9 +37,5 @@ end
 disp('N = 50');
 disp(i);
 disp(norms);
-
-subplot(1, 2, 2);
-xp = [a;x;b]; yp = [uL;u;uR];
-plot(xp, yp); grid; %spy(J);
 
 

@@ -1,3 +1,6 @@
+% Trapetsmetoden
+% Integralen y(x), med avseende på x, från a till b kan approximeras med trapetsmetoden:
+% (b - a) * (y(a) + y(b))/2
 % Indata.
 h = 0.1
 b = 2.6
@@ -23,6 +26,8 @@ y2x = y2(x);
 
 
 V2 = pi * t(y2x, h) % 1.6372
+% S = T(h/2) + (T(h/2) - T(h))/(2^2-1)
+% B = S(h/2) + ((S(h/2) - S(h))/(2^4-1)
 S = V2 + (V2 - V1) / 3 % 1.6361
 % Vi kan av V1, V2 och S dra slutsatsen att volymen av
 % rotationskroppen är (tre siffors precision) 1.64.

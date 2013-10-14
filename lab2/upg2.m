@@ -12,4 +12,6 @@ x0 = 0; xEnd = 2.6;
 uStart = [1 -1/3];
 
 [X, U] = ode45(@fp, [x0 xEnd], uStart, mopt);
+% Genom att plotta lösningen till diff. ekv. ser vi att lösningen antingen är
+% identisk med eller väldigt lik ekvationen i uppgift 1.
 plot(X, U(:,1))

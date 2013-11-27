@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[intlimits]{amsmath}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\centerline{\sc \large 3B.18: Teslatrasslet}
+\vspace{.5pc}
+\centerline{\sc Snurrig bana i magnetfält}
+\vspace{2pc}
+
+Uppgiften kan delas upp i tre delar. Del 1 går ut på att visa att
+fältkomponenterna av en vektor 
+$$
+B(r, 0, z) = \frac{\mu_r\mu_0}{4\pi} \int_{-\pi}^\pi
+\frac{\bf{i}(\varphi)\times\bf{s}(\varphi)}{s^3}ad\varphi
+$$
+med $\mu_0 = 4\pi \cdot 10^{-7}$,\ $\mathbf{i}(\varphi) = I_0(-sin\varphi,
+cos\varphi, 0)$,\ $\mathbf{s}(\varphi) = \mathbf{p} - \mathbf{q} = (r -
+acos\varphi, -asin\varphi, z)$ och $s = \|p - q\|_2 = \sqrt{(r - acos\varphi)^2
++ a^2sin^2\varphi + z^2}$ blir
+$$
+B_x = C\int_{-\pi}^\pi \frac{zcos\varphi}{s^3}d\varphi, \
+B_y = 0,\
+B_z = C\int_{-\pi}^\pi \frac{a - rcos\varphi}{s^3}d\varphi 
+$$
+där $C = \mu_rI_0a \cdot 10^{-7}$.
+% med $\mu_0 = 4\pi \cdot 10^{-7}$, $\bf{i}(\varphi) = I_0(-sin\varphi,
+% cos\varphi, 0)$, $\bf{s}(\varphi) = \bf{p} - \bf{q} = (r - acos\varphi,
+% -asin\varphi, z)$, 
+% $s = \|\bf{p} - \bf{q}\| = \sqrt{(r - acos\varphi)^2 + a^2sin^2\varphi +
+% z^2}$,
+% $C = \mu_rI_0a \cdot 10^{-7}$.
+
+Det går att lösa enkelt utan nummeriska metoder. 
+\begin{eqnarray*}
+  B(r, 0, z) & = \frac{\mu_r\mu_0}{4\pi} \int_{-\pi}^\pi
+  \frac{\bf{i}(\varphi)\times\bf{s}(\varphi)}{s^3}ad\varphi \\
+  & = \frac{a\mu_r\mu_0}{4\pi} \int_{-\pi}^\pi
+  \frac{\bf{i}(\varphi)\times\bf{s}(\varphi)}{s^3}d\varphi \\
+  & = \frac{4\pi\mu_ra \cdot 10^{-7}}{4\pi} \int_{-\pi}^\pi 
+  \frac{\bf{i}(\varphi)\times\bf{s}(\varphi)}{s^3}d\varphi \\
+  & = \mu_ra \cdot 10^{-7} \int_{-\pi}^\pi
+  \frac{\bf{i}(\varphi)\times\bf{s}(\varphi)}{s^3}d\varphi \\
+  & = \mu_ra \cdot 10^{-7} \int_{-\pi}^\pi
+  \frac{I_0(-sin\varphi, cos\varphi, 0)\times(r - acos\varphi, -asin\varphi,
+z)}{s^3}d\varphi \\
+  & = \mu_rI_0a \cdot 10^{-7} \int_{-\pi}^\pi
+  \frac{(-sin\varphi, cos\varphi, 0)\times(r - acos\varphi, -asin\varphi,
+z)}{s^3}d\varphi \\
+  & = C \int_{-\pi}^\pi
+  \frac{(-sin\varphi, cos\varphi, 0)\times(r - acos\varphi, -asin\varphi,
+z)}{s^3}d\varphi \\
+  & = C \int_{-\pi}^\pi
+  \frac{(-sin\varphi, cos\varphi, 0)\times(r - acos\varphi, -asin\varphi,
+z)}{s^3}d\varphi \\
+\end{eqnarray*}
+
+Vi utvecklar kryssprodukten
+$
+  \mathbf{i}(\varphi) \times \mathbf{s}(\varphi) = (zcos\varphi - 0, 0 - zsin\varphi,
+  asin^2\varphi - (rcos\varphi -acos^2\varphi)) = (zcos\varphi, -zsin\varphi,
+  a(sin^2\varphi + cos^2\varphi) - rcos\varphi) = (zcos\varphi, zsin\varphi, a -
+  rcos\varphi)
+$. 
+Nu ser vi att komponenterna $B_x = zcos\varphi$ och $B_z = a - rcos\varphi$
+men $B_y = 0 \neq zsin\varphi$.
+\end{document}

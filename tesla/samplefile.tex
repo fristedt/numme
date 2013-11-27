@@ -1,6 +1,7 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 \usepackage[intlimits]{amsmath}
 \usepackage[utf8]{inputenc}
+\usepackage[margin=0.8in]{geometry}
 
 \begin{document}
 
@@ -25,13 +26,8 @@ B_y = 0,\
 B_z = C\int_{-\pi}^\pi \frac{a - rcos\varphi}{s^3}d\varphi 
 $$
 där $C = \mu_rI_0a \cdot 10^{-7}$.
-% med $\mu_0 = 4\pi \cdot 10^{-7}$, $\bf{i}(\varphi) = I_0(-sin\varphi,
-% cos\varphi, 0)$, $\bf{s}(\varphi) = \bf{p} - \bf{q} = (r - acos\varphi,
-% -asin\varphi, z)$, 
-% $s = \|\bf{p} - \bf{q}\| = \sqrt{(r - acos\varphi)^2 + a^2sin^2\varphi +
-% z^2}$,
-% $C = \mu_rI_0a \cdot 10^{-7}$.
 
+\vspace{1pc}
 Det går att lösa enkelt utan nummeriska metoder. 
 \begin{eqnarray*}
   B(r, 0, z) & = \frac{\mu_r\mu_0}{4\pi} \int_{-\pi}^\pi
@@ -44,25 +40,50 @@ Det går att lösa enkelt utan nummeriska metoder.
   \frac{\bf{i}(\varphi)\times\bf{s}(\varphi)}{s^3}d\varphi \\
   & = \mu_ra \cdot 10^{-7} \int_{-\pi}^\pi
   \frac{I_0(-sin\varphi, cos\varphi, 0)\times(r - acos\varphi, -asin\varphi,
-z)}{s^3}d\varphi \\
+  z)}{s^3}d\varphi \\
   & = \mu_rI_0a \cdot 10^{-7} \int_{-\pi}^\pi
   \frac{(-sin\varphi, cos\varphi, 0)\times(r - acos\varphi, -asin\varphi,
-z)}{s^3}d\varphi \\
+  z)}{s^3}d\varphi \\
   & = C \int_{-\pi}^\pi
   \frac{(-sin\varphi, cos\varphi, 0)\times(r - acos\varphi, -asin\varphi,
-z)}{s^3}d\varphi \\
+  z)}{s^3}d\varphi \\
   & = C \int_{-\pi}^\pi
-  \frac{(-sin\varphi, cos\varphi, 0)\times(r - acos\varphi, -asin\varphi,
-z)}{s^3}d\varphi \\
+  \frac{(zcos\varphi - 0, 0 - (-zsin\varphi), asin^2\varphi - cos\varphi(r -
+  acos\varphi))}{s^3}d\varphi \\
+  & = C \int_{-\pi}^\pi
+  \frac{(zcos\varphi, zsin\varphi, asin^2\varphi + acos^2\varphi - rcos\varphi)}{s^3}d\varphi \\
+  & = C \int_{-\pi}^\pi
+  \frac{(zcos\varphi, zsin\varphi, a(sin^2\varphi + cos^2\varphi) - rcos\varphi)}{s^3}d\varphi \\
+  & = C \int_{-\pi}^\pi
+  \frac{(zcos\varphi, zsin\varphi, a - rcos\varphi)}{s^3}d\varphi \\
 \end{eqnarray*}
 
-Vi utvecklar kryssprodukten
-$
-  \mathbf{i}(\varphi) \times \mathbf{s}(\varphi) = (zcos\varphi - 0, 0 - zsin\varphi,
-  asin^2\varphi - (rcos\varphi -acos^2\varphi)) = (zcos\varphi, -zsin\varphi,
-  a(sin^2\varphi + cos^2\varphi) - rcos\varphi) = (zcos\varphi, zsin\varphi, a -
-  rcos\varphi)
-$. 
-Nu ser vi att komponenterna $B_x = zcos\varphi$ och $B_z = a - rcos\varphi$
-men $B_y = 0 \neq zsin\varphi$.
+Nu ser vi att $B_x = C\int_{-\pi}^\pi \frac{zcos\varphi}{s^3}d\varphi$ och $B_z
+= C\int_{-\pi}^\pi \frac{a - rcos\varphi}{s^3}d\varphi $, men $B_y$ kräver lite mer analys.
+
+\vspace{1pc}
+
+Enligt beräkningen ovan gäller $B_y = C\int_{-\pi}^\pi
+\frac{zsin\varphi}{s^3}d\varphi$. Dessutom vet vi att $y = 0$ eftersom vi
+arbetar i punkten $p = (r, 0, z)$. Därför måste $sin\varphi = 0$, vilket medför
+\begin{eqnarray*}
+  B_y & = C\int_{-\pi}^\pi \frac{zsin\varphi}{s^3}d\varphi \\
+      & = C\int_{-\pi}^\pi \frac{z \cdot 0}{s^3}d\varphi \\
+      & = C \cdot 0 \\
+      & = 0.
+\end{eqnarray*}
+
+Nu är del 1 nästan klar. Som uppgiftsförfattaren noterar har magnetfältet endast
+komponenter i radiell- och z-led. Därför byter vi namn på $B_x$ till $B_r$, då
+$y = 0$.
+
+\vspace{1pc}
+
+Del 2 handlar om att nummeriskt lösa diffrentialekvationssystemet 
+
+$$
+dr/dv = B_r(r,z),\ dz/dv = B_z(r, z),\ r(0) = r_0,\ z(0) = 0.
+$$
+Det första problemet vi stöter på är att integralen $\int_{-\pi}^\pi
+\frac{zcos\varphi}{s^3}d\varphi$ alltid är lika med 0, eftersom funktionen 
 \end{document}

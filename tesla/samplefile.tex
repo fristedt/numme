@@ -2,6 +2,8 @@
 \usepackage[intlimits]{amsmath}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=0.8in]{geometry}
+\usepackage[numbered]{mcode}
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -77,13 +79,64 @@ Nu är del 1 nästan klar. Som uppgiftsförfattaren noterar har magnetfältet en
 komponenter i radiell- och z-led. Därför byter vi namn på $B_x$ till $B_r$, då
 $y = 0$.
 
-\vspace{1pc}
+\clearpage
+\centerline{\sc Fältlinjeberäkning}
+\vspace{2pc}
 
 Del 2 handlar om att nummeriskt lösa diffrentialekvationssystemet 
 
 $$
 dr/dv = B_r(r,z),\ dz/dv = B_z(r, z),\ r(0) = r_0,\ z(0) = 0.
 $$
-Det första problemet vi stöter på är att integralen $\int_{-\pi}^\pi
-\frac{zcos\varphi}{s^3}d\varphi$ alltid är lika med 0, eftersom funktionen 
+Det första problemet vi stöter på är att integralerna i $B_r$ och $B_z$ alltid
+är lika med 0, eftersom funktionen vi söker bildar en oval med mittpunkt i
+origo. Därför får vi ändra integreringsintervallet.
+
+$$
+C\int_{-\pi}^\pi \frac{zcos\varphi}{s^3}d\varphi = 4C\int_0^{\pi/2}
+\frac{zcos\varphi}{s^3}d\varphi, \
+C\int_{-\pi}^\pi \frac{a - rcos\varphi}{s^3}d\varphi = 4C\int_0^{\pi/2} \frac{a - rcos\varphi}{s^3}d\varphi 
+$$
+
+Nu kan ekvationssystemet lösas med Matlabs ODE.
+
+\lstinputlisting{tesla.m}
+\lstinputlisting{fp.m}
+
+\includegraphics[scale=0.5]{ovals.pdf}
+
+\clearpage
+\centerline{\sc Beräkning av partikelbanor}
+\vspace{2pc}
+
+Del 3 handlar om ett nytt diffrentialekvationssystem. Vi söker en tidsberoende
+partikelbana $\mathbf{s}(t) = (x(t), y(t), z(t))$ som beskrivs av
+diffrentialekvationen $m\mathbf{\ddot{s}} = Q(\mathbf{\dot{s}} \times
+\mathbf{B})$. I punkten $(x, y, z)$ har magnetfältet komponenterna
+$$
+B_x = \frac{x}{r}B_r,\ B_y = \frac{y}{r}B_r,\ B_z
+$$
+där $r = \sqrt{x^2 + y^2}$. Om vi inför $c_p = \frac{Q}{m}$ kan vi göra följande
+härledning.
+\begin{eqnarray*}
+  m\mathbf{\ddot{s}} & = Q(\mathbf{\dot{s}} \times \mathbf{B}) \Leftrightarrow
+  \\
+  \mathbf{\ddot{s}} & = \frac{Q}{m}(\mathbf{\dot{s}} \times \mathbf{B}) = 
+  \\
+  \mathbf{\ddot{s}} & = c_p(\mathbf{\dot{s}} \times \mathbf{B}) = 
+  \\
+  (\ddot{x}, \ddot{y}, \ddot{z})& = c_p((\dot{x},\dot{y},\dot{z}) \times
+  (\frac{x}{r}B_r,\frac{y}{r}B_r,B_z)) = 
+  \\
+  (\ddot{x}, \ddot{y}, \ddot{z})& = c_p(\dot{y}B_z - \dot{z}B_y, 
+  \dot{z}B_x - \dot{x}B_z, \dot{x}B_y - \dot{y}B_x) = 
+  \\
+  (\ddot{x}, \ddot{y}, \ddot{z})& = (c_p(\dot{y}B_z - \dot{z}B_y), 
+  c_p(\dot{z}B_x - \dot{x}B_z), c_p(\dot{x}B_y - \dot{y}B_x))
+\end{eqnarray*}
+Alltså blir komponenterna 
+$$
+\ddot{x} = c_p(\dot{y}B_z - \dot{z}B_y),\ \ddot{y} = c_p(\dot{z}B_x -
+\dot{x}B_z),\ \ddot{z} = c_p(\dot{x}B_y - \dot{y}B_x)
+$$
 \end{document}

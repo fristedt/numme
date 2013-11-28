@@ -137,6 +137,22 @@ härledning.
 Alltså blir komponenterna 
 $$
 \ddot{x} = c_p(\dot{y}B_z - \dot{z}B_y),\ \ddot{y} = c_p(\dot{z}B_x -
-\dot{x}B_z),\ \ddot{z} = c_p(\dot{x}B_y - \dot{y}B_x)
+\dot{x}B_z),\ \ddot{z} = c_p(\dot{x}B_y - \dot{y}B_x).
 $$
+För att kunna lösa systemet med ode45 behöver vi skriva om systemet till en
+första ordningens diffrentialekvationssystem. Därför inför vi betäckningarna
+
+\begin{align*}
+  u_1 &= x,\ u_2 = \dot{x}, & \dot{u_1} = u_2,\ \dot{u_2} = c_p(v_2B_z -
+  w_2B_y),\\
+  v_1 &= y,\ v_2 = \dot{y},& \dot{v_1} = v_2,\ \dot{v_2} = c_p(w_2B_x - u_2B_z),\\
+  w_1 &= z,\ w_2 = \dot{z},& \dot{w_1} = w_2,\ \dot{w_2} = c_p(u_2B_y - v_2B_x).\\
+\end{align*}
+Nu kan vi lösa systemet med hjälp av startvärdena nedan.
+\begin{align*}
+  x(0) &= 1.2a, & \dot{x}(0) = 0,\\
+  y(0) &= 0, & \dot{y}(0) = v_0,\\
+  z(0) &= 0.15a, & \dot{z}(0) = 0
+\end{align*}
+där $v_0 = 200000$ och $c_p = 2 \cdot 10^7$.
 \end{document}

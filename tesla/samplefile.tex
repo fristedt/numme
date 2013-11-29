@@ -4,6 +4,12 @@
 \usepackage[margin=0.8in]{geometry}
 \usepackage[numbered]{mcode}
 \usepackage{graphicx}
+\usepackage[swedish]{babel}
+\usepackage{float}
+
+\restylefloat{table}
+
+% \usepackage{adjustbox}
 
 \begin{document}
 
@@ -13,7 +19,7 @@
 \vspace{2pc}
 
 Uppgiften kan delas upp i tre delar. Del 1 går ut på att visa att
-fältkomponenterna av en vektor 
+komponenterna av en vektor 
 $$
 B(r, 0, z) = \frac{\mu_r\mu_0}{4\pi} \int_{-\pi}^\pi
 \frac{\bf{i}(\varphi)\times\bf{s}(\varphi)}{s^3}ad\varphi
@@ -103,7 +109,12 @@ Nu kan ekvationssystemet lösas med Matlabs ODE.
 \lstinputlisting{tesla.m}
 \lstinputlisting{fp.m}
 
-\includegraphics[scale=0.5]{ovals.pdf}
+\begin{figure}
+  \center
+  \caption{En plot av fältlinjerna med olika värden på $r_0$. Inifrån och ut är
+  värdena 0.2a, 0.3a, 0.4a, 0.5a}
+    \includegraphics[scale=0.5,trim=6pc 11pc 6pc 11pc,clip]{ovals.pdf}
+\end{figure}
 
 \clearpage
 \centerline{\sc Beräkning av partikelbanor}
@@ -151,8 +162,74 @@ första ordningens diffrentialekvationssystem. Därför inför vi betäckningarn
 Nu kan vi lösa systemet med hjälp av startvärdena nedan.
 \begin{align*}
   x(0) &= 1.2a, & \dot{x}(0) = 0,\\
-  y(0) &= 0, & \dot{y}(0) = v_0,\\
+  y(0) &= 0,\ & \dot{y}(0) = v_0,\\
   z(0) &= 0.15a, & \dot{z}(0) = 0
 \end{align*}
 där $v_0 = 200000$ och $c_p = 2 \cdot 10^7$.
+
+\lstinputlisting{tesla3.m}
+\lstinputlisting{fp2.m}
+
+Mot slutet av körningen av ode45 händer något konstigt; s(t) slutar följa det
+tigiare torusliknande mönstret och drar iväg i en rät linje. Jag misstänker att
+anledningen är kancellation men har inget bevis för hypotesen. Se figurerna 2,
+3, och 4 för detaljer.
+
+\begin{figure}[H]
+  \caption{Så här ser det ut om vi plottar hela resultatet av ode45. Det
+    annorlunda och troligtvis felaktiga beteendet av $s(t)$ kan vara orsakat av
+  kancellation. Indexintervall: $1\ldots69393\ (S(:,1))$}
+  \begin{centering}
+    \setlength\fboxsep{0pt}
+    \setlength\fboxrule{0.5pt}
+    \fbox{\includegraphics[scale=0.55,trim=6pc 15pc 8pc 15pc,clip]{posBad}}
+    \fbox{\includegraphics[scale=0.55,trim=6pc 15pc 8pc 15pc,clip]{speedBad}}
+  \end{centering}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Om vi istället plottar halva intervallet får vi en vettigare bild av partikelns bana. Intervall: $1\ldots\frac{69393}{2}$}
+  \begin{centering}
+    \setlength\fboxsep{0pt}
+    \setlength\fboxrule{0.5pt}
+    \fbox{\includegraphics[scale=0.55,trim=6pc 15pc 8pc 15pc,clip]{posHalf}}
+    \fbox{\includegraphics[scale=0.55,trim=6pc 15pc 8pc 15pc,clip]{speedHalf}}
+  \end{centering}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Med hjälp av upprepade försök hittade jag det högsta indexet som ger en bra bild. Intervall: $1\ldots69270$}
+  \begin{centering}
+    \setlength\fboxsep{0pt}
+    \setlength\fboxrule{0.5pt}
+    \fbox{\includegraphics[scale=0.55,trim=6pc 15pc 8pc 15pc,clip]{posBest}}
+    \fbox{\includegraphics[scale=0.55,trim=6pc 15pc 8pc 15pc,clip]{speedBest}}
+  \end{centering}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{l l l}
+    Komponent & Max & Min \\
+    x & $0.486771690308782$ & $ -0.456856640922508$\\
+    y & $0.522403421982921$ & $ -0.501795361430149$\\
+    z & $0.143200879717427$ & $ -0.146768568104478$\\
+    $\dot{x}$ & $2.746180389029979 \cdot 10^5$ & $-2.739321965020182 \cdot 10^5$\\
+    $\dot{y}$ & $2.752769112730630 \cdot 10^5$ & $-2.762187255299316 \cdot 10^5$\\
+    $\dot{z}$ & $2.735498451313063 \cdot 10^5$ & $-2.736650329878195 \cdot 10^5$\\
+  \end{tabular}
+\end{table}
+
+Eftersom det är alldeles för mycket utdata för att bifoga i detta dokument har
+jag sammanställt det som är mest intressant. Vi ser från tabellen att partikelhastigheten för alla led ligger i intervallet
+$[-2.77 \cdot 10^5, 2.77 \cdot 10^5]$, vilket svarar på frågan från uppgiften om
+hur mycket hastigheten varierar.
+
+% Max xpos: 0.486771690308782
+% Max ypos: 0.522403421982921
+% Max zpos: 0.143200879717427
+
+% Max xvel: 2.746180389029979e+05
+% Max yvel: 2.752769112730630e+05
+% Max zvel: 2.735498451313063e+05
 \end{document}

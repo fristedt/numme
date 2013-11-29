@@ -1,9 +1,9 @@
+global a C
 a  = 0.1;
 I0 = 2.0;
 ur = 40000;
 C  = ur * I0 * a * 1e-7;
 mopt=odeset('OutputFcn', @odephas3, 'OutputSel', [1 3 5]);
-
 format long;
 
 v0 =  2e5;
@@ -25,9 +25,12 @@ s0 = [x0
       dz0];
 
 [T, S] = ode45(@fp2, [0 1], s0, mopt);
-S
 
-% subplot(2, 2, 1);
-% plot3(S(:,1), S(:,3), S(:,5));
-% subplot(2, 2, 2);
-% plot3(S(:,2), S(:,4), S(:,6));
+range = 1:69270;
+
+subplot(2, 2, 1);
+% Plotta partikelns bana.
+plot3(S(range,1), S(range,3), S(range,5));
+subplot(2, 2, 2);
+% Plotta partikelns hastighet.
+plot3(S(range,2), S(range,4), S(range,6));

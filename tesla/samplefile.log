@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.11.4)  28 NOV 2013 12:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.11.4)  28 NOV 2013 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -558,27 +558,51 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen124
 \Gin@req@width=\dimen125
-) (./samplefile.aux)
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/05/16 v3.9f The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel-swedish/swedish.ldf
+Language: swedish 2005/03/31 v2.3d Swedish support from the babel system
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/05/16 v3.9f Babel common definitions
+\babel@savecnt=\count111
+\U@D=\dimen126
+)
+Package babel Info: Making " an active character on input line 90.
+))
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count112
+\float@exts=\toks24
+\float@box=\box30
+\@float@everytoks=\toks25
+\@floatcapt=\box31
+)
+\@float@every@table=\toks26
+ (./samplefile.aux)
 \openout1 = `samplefile.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 14.
+
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    ... okay on input line 14.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -616,19 +640,19 @@ LaTeX Font Info:    ... okay on input line 8.
 
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen126
-\scratchbox=\box30
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen127
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count113
+\scratchdimen=\dimen127
+\scratchbox=\box32
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen128
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks28
 )
-\c@lstlisting=\count117
+\c@lstlisting=\count119
  (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -675,7 +699,7 @@ e
 )) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 103.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 109.
 
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -693,7 +717,7 @@ Overfull \hbox (142.13089pt too wide) in paragraph at lines 3--4
  []
 
 )
-Overfull \hbox (146.93094pt too wide) in paragraph at lines 4--104
+Overfull \hbox (146.93094pt too wide) in paragraph at lines 4--110
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][] 
@@ -702,49 +726,126 @@ Overfull \hbox (146.93094pt too wide) in paragraph at lines 4--104
 <ovals.pdf, id=19, 614.295pt x 794.97pt>
 File: ovals.pdf Graphic file (type pdf)
  <use ovals.pdf>
-Package pdftex.def Info: ovals.pdf used on input line 106.
-(pdftex.def)             Requested size: 307.14674pt x 397.48402pt.
+Package pdftex.def Info: ovals.pdf used on input line 116.
+(pdftex.def)             Requested size: 235.14693pt x 265.48434pt.
  [2
 
 ] [3 <./ovals.pdf>]
-Overfull \hbox (23.08037pt too wide) in paragraph at lines 112--116
-[]\OT1/cmr/m/n/10 Del 3 hand-lar om ett nytt diffren-tialek-va-tion-ssys-tem. V
-i s^^?oker en tids-beroende par-tikel-bana $\OT1/cmr/bx/n/10 s\OT1/cmr/m/n/10 (
-\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (\OML/
-cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; y\OT1/cmr/m/n/10 (\OML/cmm/m/i
-t/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; z\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\
-OT1/cmr/m/n/10 ))$
+Overfull \hbox (21.23514pt too wide) in paragraph at lines 123--127
+[]\OT1/cmr/m/n/10 Del 3 hand-lar om ett nytt diff-ren-ti-a-lekva-tions-sy-stem.
+ Vi s[]oker en tids-be-ro-en-de par-ti-kel-ba-na $\OT1/cmr/bx/n/10 s\OT1/cmr/m/
+n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 
+(\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; y\OT1/cmr/m/n/10 (\OML/c
+mm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; z\OT1/cmr/m/n/10 (\OML/cmm/m/it
+/10 t\OT1/cmr/m/n/10 ))$
  []
 
-[4
+(./tesla3.m [4
 
-] (./samplefile.aux) ) 
+]) (./fp2.m
+Overfull \hbox (55.73001pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (65.33011pt too wide) in paragraph at lines 8--10
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) <posBad.pdf, id=37, 614.295pt x 794.97pt>
+File: posBad.pdf Graphic file (type pdf)
+ <use posBad.pdf>
+Package pdftex.def Info: posBad.pdf used on input line 185.
+(pdftex.def)             Requested size: 245.463pt x 239.23424pt.
+
+<speedBad.pdf, id=39, 614.295pt x 794.97pt>
+File: speedBad.pdf Graphic file (type pdf)
+ <use speedBad.pdf>
+Package pdftex.def Info: speedBad.pdf used on input line 186.
+(pdftex.def)             Requested size: 245.463pt x 239.23424pt.
+
+Overfull \hbox (13.27275pt too wide) in paragraph at lines 185--188
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--188
+
+ []
+
+<posHalf.pdf, id=41, 614.295pt x 794.97pt>
+File: posHalf.pdf Graphic file (type pdf)
+ <use posHalf.pdf>
+Package pdftex.def Info: posHalf.pdf used on input line 195.
+(pdftex.def)             Requested size: 245.463pt x 239.23424pt.
+
+<speedHalf.pdf, id=43, 614.295pt x 794.97pt>
+File: speedHalf.pdf Graphic file (type pdf)
+ <use speedHalf.pdf>
+Package pdftex.def Info: speedHalf.pdf used on input line 196.
+(pdftex.def)             Requested size: 245.463pt x 239.23424pt.
+
+Overfull \hbox (13.27275pt too wide) in paragraph at lines 195--198
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--198
+
+ []
+
+[5 <./posBad.pdf> <./speedBad.pdf>] <posBest.pdf, id=58, 614.295pt x 794.97pt>
+File: posBest.pdf Graphic file (type pdf)
+
+<use posBest.pdf>
+Package pdftex.def Info: posBest.pdf used on input line 205.
+(pdftex.def)             Requested size: 245.463pt x 239.23424pt.
+ <speedBest.pdf, id=60, 614.295pt x 794.97pt>
+File: speedBest.pdf Graphic file (type pdf)
+
+<use speedBest.pdf>
+Package pdftex.def Info: speedBest.pdf used on input line 206.
+(pdftex.def)             Requested size: 245.463pt x 239.23424pt.
+
+Overfull \hbox (13.27275pt too wide) in paragraph at lines 205--208
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--208
+
+ []
+
+[6 <./posHalf.pdf> <./speedHalf.pdf> <./posBest.pdf> <./speedBest.pdf>]
+(./samplefile.aux) ) 
 Here is how much of TeX's memory you used:
- 5546 strings out of 493311
- 71895 string characters out of 6143650
- 170037 words of memory out of 5000000
- 8918 multiletter control sequences out of 15000+600000
+ 6098 strings out of 493311
+ 78734 string characters out of 6143650
+ 181573 words of memory out of 5000000
+ 9441 multiletter control sequences out of 15000+600000
  9541 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,9n,42p,236b,1302s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.
-pfb>
-Output written on samplefile.pdf (4 pages, 160439 bytes).
+ 38i,11n,42p,328b,1612s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pf
+b>
+Output written on samplefile.pdf (6 pages, 1826999 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -173,7 +173,9 @@ där $v_0 = 200000$ och $c_p = 2 \cdot 10^7$.
 Mot slutet av körningen av ode45 händer något konstigt; s(t) slutar följa det
 tigiare torusliknande mönstret och drar iväg i en rät linje. Jag misstänker att
 anledningen är kancellation men har inget bevis för hypotesen. Se figurerna 2,
-3, och 4 för detaljer.
+3, och 4 för detaljer. Notera att den högre intervallgränsen i körningarna nedan inte garanterat
+stämmer varje körning, eftersom mycket är automatiserat i ode45 (steglängd
+m.m.). Därför kan intervallet behöva justeras i framtida körningar.
 
 \begin{figure}[H]
   \caption{Så här ser det ut om vi plottar hela resultatet av ode45. Det
@@ -211,9 +213,12 @@ anledningen är kancellation men har inget bevis för hypotesen. Se figurerna 2,
   \centering
   \begin{tabular}{l l l}
     Komponent & Max & Min \\
-    x & $0.486771690308782$ & $ -0.456856640922508$\\
-    y & $0.522403421982921$ & $ -0.501795361430149$\\
-    z & $0.143200879717427$ & $ -0.146768568104478$\\
+    % x & $0.486771690308782$ & $ -0.456856640922508$\\
+    x & $0.264324738725749$ & $ -0.282301086928607$\\
+    % y & $0.522403421982921$ & $ -0.501795361430149$\\
+    y & $0.261193590372932$ & $ -0.257412217159470$\\
+    % z & $0.143200879717427$ & $ -0.146768568104478$\\
+    z & $0.073550783526418$ & $ -0.072363058159509$\\
     $\dot{x}$ & $2.746180389029979 \cdot 10^5$ & $-2.739321965020182 \cdot 10^5$\\
     $\dot{y}$ & $2.752769112730630 \cdot 10^5$ & $-2.762187255299316 \cdot 10^5$\\
     $\dot{z}$ & $2.735498451313063 \cdot 10^5$ & $-2.736650329878195 \cdot 10^5$\\
@@ -223,7 +228,7 @@ anledningen är kancellation men har inget bevis för hypotesen. Se figurerna 2,
 Eftersom det är alldeles för mycket utdata för att bifoga i detta dokument har
 jag sammanställt det som är mest intressant. Vi ser från tabellen att partikelhastigheten för alla led ligger i intervallet
 $[-2.77 \cdot 10^5, 2.77 \cdot 10^5]$, vilket svarar på frågan från uppgiften om
-hur mycket hastigheten varierar.
+hur mycket hastigheten varierar. 
 
 % Max xpos: 0.486771690308782
 % Max ypos: 0.522403421982921

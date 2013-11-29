@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.11.4)  28 NOV 2013 21:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.11.4)  29 NOV 2013 09:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -757,42 +757,42 @@ Overfull \hbox (65.33011pt too wide) in paragraph at lines 8--10
 ) <posBad.pdf, id=37, 614.295pt x 794.97pt>
 File: posBad.pdf Graphic file (type pdf)
  <use posBad.pdf>
-Package pdftex.def Info: posBad.pdf used on input line 185.
+Package pdftex.def Info: posBad.pdf used on input line 187.
 (pdftex.def)             Requested size: 245.463pt x 239.23424pt.
 
 <speedBad.pdf, id=39, 614.295pt x 794.97pt>
 File: speedBad.pdf Graphic file (type pdf)
  <use speedBad.pdf>
-Package pdftex.def Info: speedBad.pdf used on input line 186.
+Package pdftex.def Info: speedBad.pdf used on input line 188.
 (pdftex.def)             Requested size: 245.463pt x 239.23424pt.
 
-Overfull \hbox (13.27275pt too wide) in paragraph at lines 185--188
+Overfull \hbox (13.27275pt too wide) in paragraph at lines 187--190
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--188
+Underfull \hbox (badness 10000) in paragraph at lines 187--190
 
  []
 
 <posHalf.pdf, id=41, 614.295pt x 794.97pt>
 File: posHalf.pdf Graphic file (type pdf)
  <use posHalf.pdf>
-Package pdftex.def Info: posHalf.pdf used on input line 195.
+Package pdftex.def Info: posHalf.pdf used on input line 197.
 (pdftex.def)             Requested size: 245.463pt x 239.23424pt.
 
 <speedHalf.pdf, id=43, 614.295pt x 794.97pt>
 File: speedHalf.pdf Graphic file (type pdf)
  <use speedHalf.pdf>
-Package pdftex.def Info: speedHalf.pdf used on input line 196.
+Package pdftex.def Info: speedHalf.pdf used on input line 198.
 (pdftex.def)             Requested size: 245.463pt x 239.23424pt.
 
-Overfull \hbox (13.27275pt too wide) in paragraph at lines 195--198
+Overfull \hbox (13.27275pt too wide) in paragraph at lines 197--200
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--198
+Underfull \hbox (badness 10000) in paragraph at lines 197--200
 
  []
 
@@ -800,21 +800,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--198
 File: posBest.pdf Graphic file (type pdf)
 
 <use posBest.pdf>
-Package pdftex.def Info: posBest.pdf used on input line 205.
+Package pdftex.def Info: posBest.pdf used on input line 207.
 (pdftex.def)             Requested size: 245.463pt x 239.23424pt.
  <speedBest.pdf, id=60, 614.295pt x 794.97pt>
 File: speedBest.pdf Graphic file (type pdf)
 
 <use speedBest.pdf>
-Package pdftex.def Info: speedBest.pdf used on input line 206.
+Package pdftex.def Info: speedBest.pdf used on input line 208.
 (pdftex.def)             Requested size: 245.463pt x 239.23424pt.
 
-Overfull \hbox (13.27275pt too wide) in paragraph at lines 205--208
+Overfull \hbox (13.27275pt too wide) in paragraph at lines 207--210
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--208
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
 
  []
 
@@ -842,7 +842,7 @@ fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
 ts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pf
 b>
-Output written on samplefile.pdf (6 pages, 1826999 bytes).
+Output written on samplefile.pdf (6 pages, 1827272 bytes).
 PDF statistics:
  133 PDF objects out of 1000 (max. 8388607)
  95 compressed objects within 1 object stream
